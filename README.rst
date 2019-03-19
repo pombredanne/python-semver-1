@@ -1,9 +1,22 @@
 semver
 =================
 
+.. image:: https://travis-ci.org/podhmo/python-semver.svg?branch=master
+    :target: https://travis-ci.org/podhmo/python-semver
+
 python version of [node-semver](https://github.com/isaacs/node-semver)
 
-.. code:: python
+install
+----------------------------------------
+
+.. code-block:: console
+
+   pip install node-semver
+
+examples
+----------------------------------------
+
+.. code-block:: python
 
    # -*- coding:utf-8 -*-
    from semver import max_satisfying
@@ -21,3 +34,8 @@ python version of [node-semver](https://github.com/isaacs/node-semver)
        (max_satisfying(versions, range_, loose=False) == '2.0.0')
    except ValueError as e:
        assert e.args[0] == "Invalid Version: 2.0.0b1"
+
+   versions = ['1.2.3', '1.2.4', '1.2.5', '1.2.6-pre.1', '2.0.1']
+   range_ = '~1.2.3'
+   assert max_satisfying(versions, range_, loose=False, include_prerelease=True) == '1.2.6-pre.1'
+   assert max_satisfying(versions, range_, loose=False, include_prerelease=False) == '1.2.5'

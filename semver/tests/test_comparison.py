@@ -34,6 +34,8 @@ cands = [
     ['1.2.3-a.b', '1.2.3-a.5', False],
     ['1.2.3-a.b', '1.2.3-a', False],
     ['1.2.3-a.b.c.10.d.5', '1.2.3-a.b.c.5.d.100', False],
+    ['1.2.3-r2', '1.2.3-r100', False],
+    ['1.2.3-r100', '1.2.3-R2', False],
 ]
 
 
@@ -97,7 +99,7 @@ def test_cmp4(v0, v1, loose):
     cmp(v0, "!=", v1, loose) is True
 
 """
-   var v0 = v[0];
+    var v0 = v[0];
     var v1 = v[1];
     var loose = v[2];
     t.ok(gt(v0, v1, loose), "gt('" + v0 + "', '" + v1 + "')");
@@ -111,4 +113,4 @@ def test_cmp4(v0, v1, loose):
     t.ok(cmp(v0, '>=', v1, loose), "cmp('" + v0 + "' >= '" + v1 + "')");
     t.ok(cmp(v1, '<=', v0, loose), "cmp('" + v1 + "' <= '" + v0 + "')");
     t.ok(cmp(v0, '!=', v1, loose), "cmp('" + v0 + "' != '" + v1 + "')");
- """
+"""

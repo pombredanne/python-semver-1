@@ -1,1 +1,24 @@
+0.6.0
 
+- more strict error handling (InvalidTypeIncluded is added)
+
+0.5.1
+
+- bug fix
+
+0.5.0
+
+- include_prerelease option is added
+
+0.4.2
+
+- fix bug for support 4-digit (handling prelease and build)
+
+0.4.0
+
+- suport 4-digit version (e.g. x.y.z.a)
+
+0.3.0
+
+- drop python2.x support
+- bug fix, Add sort key function #14
